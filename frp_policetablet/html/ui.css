@@ -1,0 +1,882 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html, body {
+	display: none;
+ 	margin: 0;
+  	padding: 0;
+  	user-select: none;
+	font-family: "Poppins", sans-serif;
+    font-weight: 600;
+	overflow: hidden;
+	background: rgba(92, 92, 92, 0);
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #353434;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(22, 22, 22);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(31, 31, 31);
+  }
+.tablet-screen {
+	transition: all 0.5s;
+	
+}
+
+.tablet-main-bg {
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 1);
+	border-radius: 14px;
+	position: absolute;
+	z-index: 10;
+	top: 1400px;
+	/* top: 50%; */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 775px;
+	width: 1260px;
+}
+
+.tablet-main-bg > .close {
+	background-color: transparent;
+	cursor: pointer;
+	border: 3px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 20px;
+	width: 60px;
+}
+
+.tablet-main-bg > .close:hover {
+	border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.tablet-main {
+	display: flex;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.2);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 700px;
+	width: 1200px;
+}
+
+.menu {
+	transition: all 0.4s;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 240px;
+	z-index: 2;
+}
+.MenuClose{
+	transition: all 0.2s;
+	position: absolute;
+	left: 10.8rem;
+	top: 40.0em;
+	display: block;
+	width: 40px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0);
+	cursor: pointer;
+}
+.MenuClose i{
+	transition: all 0.3s;
+	position: relative;
+	display: block;
+	color: #fff;
+	margin: 6px 0;
+	font-size: 1.8rem;
+	rotate: -180deg;
+}
+.MenuClose i:hover{
+	color: rgb(63, 110, 240);
+}
+.menu > .header {
+	display: flex;
+	position: relative;
+	top: 15px;
+	left: 20px;
+	height: 50px;
+	max-width: 260px;
+}
+
+.menu > .header > img {
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid rgb(50, 50, 50);
+	margin-right: 10px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.menu > .header > .info {
+	position: relative;
+	top: 2px;
+}
+
+.menu > .header > .info > .name {
+	color: rgb(210, 210, 210);
+	font-size: 16px;
+	position: relative;
+	top: 1.5px;
+}
+
+.menu > .header > .info > .grade {
+	color: rgb(150, 150, 150);
+	font-size: 13px;
+	font-weight: 500;
+	position: relative;
+	bottom: 1.5px;
+}
+
+.menu > .list {
+	position: relative;
+	top: 125px;
+	left: 20px;
+	height: 50px;
+	max-width: 260px;
+}
+
+.menu > .list > .item {
+	color: rgb(210, 210, 210);
+	font-size: 16px;
+	display: flex;
+	margin: 25px 2px;
+	text-transform: uppercase;
+}
+
+.menu > .list > .item:hover {
+	color: rgb(130, 130, 130);
+	cursor: pointer;
+}
+
+.menu > .list > .item > i {
+	text-align: center;
+	position: relative;
+	top: 0.01vw;
+	left: 0;
+	width: 30px;
+}
+.hideMtext{
+	pointer-events: none;
+	width: 170px;
+	position: absolute;
+	left: 17rem;
+	padding: 0.4rem 0.3rem;
+	border-radius: 4px;
+	transform: translateY(-25%);
+	
+	background: #292929;
+	transition: all 0.4s;
+	opacity: 0;
+}
+
+main{
+	color: #fff;
+	transition: all 0.4s;
+	width: 960px;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	background: rgba(255, 0, 0, 0);
+}
+.MainPage{
+	display: block;
+}
+.TopM{
+	display: flex;
+}
+.OnDuty{
+	border-radius: 5px;
+
+	position: relative;
+	width: 45%;
+	height: 300px;
+	background: rgb(32, 32, 32);
+	margin: 1rem;
+	overflow: auto;
+}
+.OnDuty h4{
+	text-align: center;
+	position: relative;
+	margin: 0.5rem auto;
+	font-size: 1.4rem;
+}
+.DutyInfo{
+	border-radius: 5px;
+
+	position: relative;
+	width: 45%;
+	height: 300px;
+	background: rgb(32, 32, 32);
+	margin: 1rem;
+	text-align: center;
+
+}
+.DHolder{
+	height: 100%;
+	display: flex;
+}
+.DHolder div{
+	position: relative;
+	width: 250px;
+}
+.DutyInfo h4{
+	text-align: center;
+	position: relative;
+	margin: 0.5rem auto;
+	font-size: 1.4rem;
+}
+.Table{
+    text-align: center;
+    width: 95%;
+    height: fit-content;
+    background: rgba(41, 41, 41, 0);
+    border-radius: 10px;
+    margin: 0.4rem auto;
+    display: block;
+    color: white;
+    border-spacing: 0px;
+}
+tr{
+    width: 100%;
+    margin: auto;
+    background: rgba(41, 41, 41, 0);
+    height: 3rem;
+    border-bottom:2px solid rgb(32, 32, 32);
+
+}
+th{
+
+    width: 15.8rem;
+    border-bottom:10px solid rgb(32, 32, 32);
+}
+td{
+    word-wrap: break-word;
+    padding: 5px;
+    width: 15.8rem;
+    border-bottom:10px solid rgb(32, 32, 32);
+}
+.noeloelo{
+	margin: 0.4rem 0;
+}
+
+.LastNote{
+	border-radius: 5px;
+	
+	position: relative;
+	width: 93.2%;
+	height: 300px;
+	background: rgb(32, 32, 32);
+	margin: 1rem;
+	text-align: center;
+	overflow: auto;
+}
+.LastNote h4{
+	text-align: center;
+	position: relative;
+	margin: 0.5rem auto;
+	font-size: 1.4rem;
+}
+.list i {
+	transition: all .4s;
+	position: relative;
+
+}
+.SearchForCitizen{
+	text-align: center;
+	position: relative;
+	display: block;
+}
+.SearchForCitizen h3{
+	margin: 1rem 0;
+}
+.SearchForCitizen input{
+	width: 350px;
+	border: none;
+	outline: none;
+	padding: 0.4rem;
+	margin: .4rem 0;
+	background: none;
+	color: #fff;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.SearchForCitizen input:focus{
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.SearchForCitizen button{
+	border: none;
+	transition: all .3s;
+	width: 150px;
+	color: white;
+	background: transparent;
+	margin: 0.4rem 0;
+	border-radius: 5px;
+	border: 1px solid rgb(210, 210, 210);
+}
+.SearchForCitizen button:hover{
+	scale: 1.1;
+}
+.SearchForVehicle{
+	display: block;
+	text-align: center;
+	position: relative;
+
+}
+.SearchForVehicle h3{
+	margin: 1rem 0;
+}
+.SearchForVehicle input{
+	width: 350px;
+	border: none;
+	outline: none;
+	padding: 0.4rem;
+	margin: .4rem 0;
+	background: none;
+	color: #fff;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.SearchForVehicle input:focus{
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.SearchForVehicle button{
+	border: none;
+	transition: all .3s;
+	width: 150px;
+	color: white;
+	background: transparent;
+	margin: 0.4rem 0;
+	border-radius: 5px;
+	border: 1px solid rgb(210, 210, 210);
+}
+.SearchForVehicle button:hover{
+	scale: 1.1;
+}
+.CitizenBase{
+	width: 100%;
+	height: 100%;
+}
+.CitizenInfo{
+	overflow: auto;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 0, 0, 0);
+}
+.CitizenTop{
+	position: relative;
+	width: 100%;
+	top: 1rem;
+	height: fit-content;
+	background: none;
+	display: block;
+}
+.MainInfo{
+	margin: auto;
+	width: 95%;
+	height: 19rem;
+	background:rgb(32, 32, 32);
+	border-radius: 5px;
+	display: flex;
+}
+.CitizenBotom{
+	width: 100%;
+	height: 50%;
+	background: none;
+	display: flex;
+}
+.CitizenNote{
+	margin: auto;
+	width: 95%;
+	height: 100%;
+	background:rgb(32, 32, 32);
+	border-radius: 5px;
+}
+.CitizenFines{
+	border-radius: 5px;
+	margin: auto;
+	width: 95%;
+	height: 92%;
+	background:rgb(32, 32, 32);
+}
+.CitizenImage img{
+	width: 200px;
+	margin: 1.7rem 2rem;
+	border-radius: 5px;
+}
+.cInfo{
+	display: block;
+	position: relative;
+	top:1.35rem;
+	left: -1.5rem;
+}
+.cInfo div{
+	max-width: 350px;
+	border-radius: 5px;
+	position: relative;
+	padding: 0.5rem 0.3rem;
+	background: #383737;
+	margin: 0.35rem 0rem;
+}
+.CiBut{
+	display: block;
+}
+.CiBut div{
+	border-radius: 5px;
+	width: fit-content;
+	padding: 0.4rem 0.3rem;
+	background: #383737;
+
+}
+.GiveWeaponAllow{
+	position: relative;
+	top: 15.8rem;
+	right: 28.35rem;
+	cursor: pointer;
+	transition: all 0.3s;
+	min-width: 202px;
+}
+.GiveWeaponAllow:hover{
+	background: #626264;
+}
+.backToScI{
+	position: absolute;
+	top: 0.5rem;
+	right: 2.8rem;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.backToScI:hover{
+	background: #626264;
+}
+.cWeaponAllow{
+	min-width: 150px;
+}
+.citnTable{
+	width: 100%;
+
+}
+#ScItabNotes td{
+
+	margin: auto;
+	
+}
+.LastNotes{
+	border-radius: 5px;
+	
+	position: relative;
+	width: 96%;
+	height: 300px;
+	background: rgb(32, 32, 32);
+	margin: 1rem;
+	text-align: center;
+	overflow: auto;
+}
+.LastNotes h4{
+	text-align: center;
+	position: relative;
+	margin: 0.5rem auto;
+	font-size: 1.4rem;
+}
+.addNote{
+	position: absolute;
+	width: fit-content;
+	border-radius: 5px;
+	z-index: 10;
+	width: fit-content;
+	padding: 0.4rem 0.3rem;
+	background: #383737;
+	transition: all 0.3s;
+	cursor: pointer;
+	right: 4.4rem;
+	transform: translateY(10%);
+	
+}
+.addNote:hover{
+	background: #626264;
+}
+.SendNoteC{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 25;
+	width: 40rem;
+	height: 20rem;
+	text-align: center;
+	border: 3px solid rgb(56, 56, 56);
+	border-radius: 5px;
+	transform: translateX(-50%) translateY(-50%);
+	background: #383737;
+}
+.SearchForVehicle{
+	text-align: center;
+	position: relative;
+
+}
+.SendNoteC h3{
+	margin: 1rem 0;
+}
+.SendNoteC textarea{
+	width: 450px;
+	border: none;
+	height: 10rem;
+	outline: none;
+	padding: 0.4rem;
+	margin: .4rem 0;
+	background: none;
+	color: #fff;
+	border-bottom: 1px solid rgb(210, 210, 210);
+	resize: none;
+}
+.SendNoteC textarea:focus{
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.SendNoteC button{
+	border: none;
+	transition: all .3s;
+	width: 150px;
+	color: white;
+	background: transparent;
+	margin: 0.4rem 0;
+	border-radius: 5px;
+	border: 1px solid rgb(210, 210, 210);
+}
+.SendNoteC button:hover{
+	scale: 1.1;
+}
+.cloaseNoteA{
+	position: absolute;
+	width: fit-content;
+	border-radius: 5px;
+	width: fit-content;
+	padding: 0.4rem 0.3rem;
+	background: #1f1e1e;
+	transition: all 0.3s;
+	cursor: pointer;
+	right: 1rem;
+	transform: translateY(20%);
+	
+	
+}
+.FiBut{
+	display: block;
+	position: absolute;
+	top:0rem;
+	right: 27.8rem;
+}
+.FiBut div{
+	margin: 0.4rem 0rem;
+}
+.FiBut{
+	display: block;
+}
+.FiBut div{
+	border-radius: 5px;
+	width: fit-content;
+	padding: 0.4rem 0.3rem;
+	background: #383737;
+}
+.backToSfI{
+	position: absolute;
+	top: 0.5rem;
+	left: 22.8rem;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.backToSfI:hover{
+	background: #626264;
+}
+.FMainInfo{
+	position: relative;
+	top: 1rem;
+}
+.fInfo{
+	display: block;
+	position: relative;
+	top:1.35rem;
+	left: -1.5rem;
+}
+.fInfo div{
+	max-width: 350px;
+	border-radius: 5px;
+	position: relative;
+	padding: 0.5rem 0.3rem;
+	background: #383737;
+	margin: 0.35rem 0rem;
+}
+.GiveFineS{
+	margin: 2rem auto;
+	width: 95%;
+	height: 13rem;
+	background:rgb(32, 32, 32);
+	border-radius: 5px;
+	display: flex;
+}
+.GiveFineS textarea{
+	width: 450px;
+	border: none;
+	border-radius: 5px;
+	height: 10rem;
+	outline: none;
+	padding: 0.4rem;
+	margin: 1.5rem;
+	background: none;
+	color: #fff;
+	border: 1px solid rgb(210, 210, 210);
+	resize: none;
+}
+.GiveFineS textarea:focus{
+	border: none;
+	outline: none;
+	border: 1px solid rgb(210, 210, 210);
+}
+.GiveFineS button{
+	border: none;
+	transition: all .3s;
+	width: 40%;
+	height: fit-content;
+	color: white;
+	background: transparent;
+	margin: 0.4rem 0;
+	border-radius: 5px;
+	border: 1px solid rgb(210, 210, 210);
+	position: absolute;
+	right: 3rem;
+	top: 30.35rem;
+}
+.GiveFineS button:hover{
+	scale: 1.1;
+}
+.GiveFineS input{
+	position: absolute;
+	width: 40%;
+	border: none;
+	height: 3rem;
+	font-size: 1.2rem;
+	outline: none;
+	padding: 0.4rem;
+	margin: .4rem 0;
+	background: none;
+	right: 3rem;
+	color: #fff;
+	top: 26.35rem;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.GiveFineS input:focus{
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.FCitizenInfo{
+	display: none;
+}
+.CarInfo{
+	text-align: center;
+	position: relative;
+	display: none;
+}
+.CarMainInfo{
+	position: relative;
+	top: 1rem;
+}
+.CarImage{
+	position: relative;
+	margin: 3.5rem 2rem;
+
+}
+.CarImage img{
+	border-radius: 5px;
+	
+}
+.CarsInfo{
+	display: block;
+	position: relative;
+	top: 3.35rem;
+	left: -1.5rem;
+}
+.CarsInfo div{
+	max-width: 350px;
+	border-radius: 5px;
+	position: relative;
+	padding: 0.5rem 0.3rem;
+	background: #383737;
+	margin: 0.35rem 0rem;
+}
+.HuntCar{
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.HuntCar:hover{
+	background: #626264;
+}
+.XdCAR{
+	display: flex;
+	position: relative;
+}
+
+.CarBut{
+	display: block;
+	position: absolute;
+	top:0rem;
+	left: 57.8rem;
+}
+.CarBut div{
+	margin: 0.4rem 0rem;
+}
+.CarBut{
+	display: block;
+}
+.CarBut div{
+	border-radius: 5px;
+	width: fit-content;
+	padding: 0.4rem 0.3rem;
+	background: #383737;
+}
+.backToCar{
+	position: absolute;
+	top: 0.5rem;
+	right: 2.8rem;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.backToCar:hover{
+	background: #626264;
+}
+.DiBut{
+	display: block;
+	position: absolute;
+	top:0rem;
+	right: 27.8rem;
+}
+.DiBut div{
+	margin: 0.4rem 0rem;
+}
+.DiBut{
+	display: block;
+}
+.DiBut div{
+	border-radius: 5px;
+	width: fit-content;
+	padding: 0.4rem 0.3rem;
+	background: #383737;
+}
+.backToSDI{
+	position: absolute;
+	top: 0.5rem;
+	left: 22.8rem;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.backToSDI:hover{
+	background: #626264;
+}
+.DMainInfo{
+	position: relative;
+	top: 1rem;
+}
+.dInfo{
+	display: block;
+	position: relative;
+	top:1.35rem;
+	left: -1.5rem;
+}
+.dInfo div{
+	max-width: 350px;
+	border-radius: 5px;
+	position: relative;
+	padding: 0.5rem 0.3rem;
+	background: #383737;
+	margin: 0.35rem 0rem;
+}
+.GiveDictS{
+	margin: 2rem auto;
+	width: 95%;
+	height: 13rem;
+	background:rgb(32, 32, 32);
+	border-radius: 5px;
+	display: flex;
+}
+.GiveDictS textarea{
+	width: 450px;
+	border: none;
+	border-radius: 5px;
+	height: 10rem;
+	outline: none;
+	padding: 0.4rem;
+	margin: 1.5rem;
+	background: none;
+	color: #fff;
+	border: 1px solid rgb(210, 210, 210);
+	resize: none;
+}
+.GiveDictS textarea:focus{
+	border: none;
+	outline: none;
+	border: 1px solid rgb(210, 210, 210);
+}
+.GiveDictS button{
+	border: none;
+	transition: all .3s;
+	width: 40%;
+	height: fit-content;
+	color: white;
+	background: transparent;
+	margin: 0.4rem 0;
+	border-radius: 5px;
+	border: 1px solid rgb(210, 210, 210);
+	position: absolute;
+	right: 3rem;
+	top: 30.35rem;
+}
+.GiveDictS button:hover{
+	scale: 1.1;
+}
+.GiveDictS input{
+	position: relative;
+	width: 100%;
+	border: none;
+	height: 3rem;
+	font-size: 1.2rem;
+	outline: none;
+	padding: 0.4rem;
+	margin: .4rem 0;
+	background: none;
+	right: -1rem;
+	color: #fff;
+	top: 1.35rem;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.GiveDictS input:focus{
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(210, 210, 210);
+}
+.DCitizenInfo{
+	display: none;
+}
